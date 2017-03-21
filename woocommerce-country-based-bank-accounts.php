@@ -90,9 +90,4 @@ class WC_Country_Based_Bank_Accounts {
 	}
 }
 
-/**
- * Check if WooCommerce is active
- **/
-if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-	new WC_Country_Based_Bank_Accounts();
-}
+new WC_Country_Based_Bank_Accounts();
