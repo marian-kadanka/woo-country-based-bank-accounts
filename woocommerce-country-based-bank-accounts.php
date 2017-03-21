@@ -10,6 +10,7 @@ License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages
 Text Domain: wccbba
+GitHub Plugin URI: marian-kadanka/woocommerce-country-based-bank-accounts
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
