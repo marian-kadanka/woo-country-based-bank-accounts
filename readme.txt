@@ -7,9 +7,13 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Choose which bank account will be available in country/countries.
+Select which BACS gateway bank accounts will be available in country/countries
 
 == Description ==
+
+WooCommerce extension which allows you to assign BACS (direct bank transfer) bank accounts to 
+different countries. Based on the billing country chosen, only corresponding bank accounts are 
+then printed on the "thank you" page and in the email sent to the customer. 
 
 This plugin gives you option to choose which bank account will be available in certain country, or countries.
 
