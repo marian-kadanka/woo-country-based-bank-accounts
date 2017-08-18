@@ -29,6 +29,7 @@ class WC_Country_Based_Bank_Accounts {
 		if ( is_admin() ) {
 			add_action( 'woocommerce_loaded', array( $this, 'load_settings' ) );
 			add_action( 'update_option_woocommerce_bacs_accounts', array( $this, 'bank_accounts_changed' ) );
+			add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'add_action_links' ) );
 		} else {
 			add_action( 'woocommerce_thankyou_bacs', array( $this, 'set_selected_country' ), 1 );
 			add_action( 'woocommerce_email_before_order_table', array( $this, 'set_selected_country' ), 1 );
@@ -87,6 +88,18 @@ class WC_Country_Based_Bank_Accounts {
 		}
 
 		return $bacs_accounts;
+	}
+	
+	/**
+	 * Show action links on the plugin screen
+	 */
+	public function add_action_links( $links ) {
+		// Donate link
+		array_unshift( $links, '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka" title="' . esc_attr__( 'Donate', 'wccbba' ) . '" target="_blank">' . esc_html__( 'Donate', 'wccbba' ) . '</a>' );
+		// Settings link
+		array_unshift( $links, '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=' . $this->id ) . '" title="' . esc_attr__( 'Settings', 'woocommerce' ) . '">' . esc_html__( 'Settings', 'woocommerce' ) . '</a>' );
+		
+		return $links;
 	}
 }
 
