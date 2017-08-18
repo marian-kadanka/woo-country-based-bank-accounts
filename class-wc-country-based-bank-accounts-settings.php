@@ -65,7 +65,7 @@ class WC_Country_Based_Bank_Accounts_Settings {
 
 		$section[] = array(
 				'title' => __( 'Country Based Bank Accounts', 'wccbba' ),
-				'desc'  => __( 'Select in which countries bank accounts will be available.', 'wccbba' ),
+				'desc'  => __( 'Select in which countries certain bank accounts will be available.', 'wccbba' ),
 				'type'  => 'title',
 				'id'    => $this->id,
 			);

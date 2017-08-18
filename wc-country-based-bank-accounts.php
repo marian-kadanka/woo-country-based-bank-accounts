@@ -2,7 +2,7 @@
 /*
 Plugin Name: WooCommerce Country Based Bank Accounts
 Plugin URI:  https://wordpress.org/plugins/wc-country-based-bank-accounts/
-Description: Choose in which countries certain bank account will be available
+Description: Choose in which countries certain BACS gateway bank accounts will be available
 Version:     1.0
 Author:      Marian Kadanka
 Author URI:  https://github.com/marian-kadanka
@@ -12,6 +12,21 @@ Domain Path: /languages
 Text Domain: wccbba
 GitHub Plugin URI: marian-kadanka/wc-country-based-bank-accounts
 */
+
+/**
+ * WooCommerce Country Based Bank Accounts
+ * Copyright (C) 2017 Marian Kadanka. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
