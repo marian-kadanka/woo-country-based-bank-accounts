@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Country Based Bank Accounts\n"
+"POT-Creation-Date: 2017-08-18 19:19+0200\n"
+"PO-Revision-Date: 2017-08-18 19:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class-wc-country-based-bank-accounts-settings.php:30
+#: class-wc-country-based-bank-accounts-settings.php:67
+msgid "Country Based Bank Accounts"
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:68
+msgid "Select in which countries certain bank accounts will be available."
+msgstr ""
+
+#: wc-country-based-bank-accounts.php:70
+msgid ""
+"Your bank accounts details have been updated. You should now adjust Country "
+"Based Bank Accounts settings"
+msgstr ""
+
+#: wc-country-based-bank-accounts.php:70
+msgid "here"
+msgstr ""
+
+#: wc-country-based-bank-accounts.php:113
+msgid "Donate"
+msgstr ""
