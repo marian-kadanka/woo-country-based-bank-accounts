@@ -1,19 +1,20 @@
 === WooCommerce Country Based Bank Accounts ===
 Contributors: mariankadanka
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka
 Tags: woocommerce, BACS, bank account, country, countries, country bank account
 Requires at least: 4.2
-Tested up to: 4.7.3
+Tested up to: 4.8.1
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Select which BACS gateway bank accounts will be available in country/countries
+Select which BACS gateway bank accounts will be available in certain country/countries
 
 == Description ==
 
-WooCommerce extension which allows you to assign BACS (direct bank transfer) bank accounts to 
+WooCommerce extension which allows you to assign BACS (direct bank transfer) bank accounts to
 different countries. Based on the billing country chosen, only corresponding bank accounts are 
-then printed on the "thank you" page and in the email sent to the customer. 
+then printed on the "thank you" page and in the email send to the customer.
 
 This plugin gives you option to choose which bank account will be available in certain country, or countries.
 
@@ -25,13 +26,21 @@ If you need to have certain bank account to be available in all countries, don't
 2. You can choose multiple countries.
 
 This WooCommerce addon is compatible with:
-* WooCommerce 2.6.14
+* WooCommerce 2.6.14 and newer
 
 == Installation ==
 
-1. Upload `woocommerce-country-based-bank-accounts` folder to the `/wp-content/plugins/` directory
-2. Activate the "WooCommerce Country Based Bank Accounts" through the 'Plugins' menu in WordPress
+1. Go to Plugins > Add New > Search
+2. Type WooCommerce Country Based Bank Accounts in the search box and hit Enter
+3. Click on the button Install and then activate the plugin
 
+= Manual Installation =
+
+The manual installation method involves downloading our plugin and uploading it to your webserver via your favourite FTP application. The WordPress codex contains [instructions on how to do this here](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
+
+== Screenshots ==
+
+1. WooCommerce Country Based Bank Accounts settings page
 
 == Changelog ==
 

@@ -3,7 +3,7 @@
 
 # WooCommerce Country Based Bank Accounts
 
-Select which BACS gateway bank accounts will be available in country/countries
+Select which BACS gateway bank accounts will be available in certain country/countries
 
 -----------------------
 
@@ -20,13 +20,17 @@ If you need to have certain bank account to be available in all countries, don't
 ### Compatibility
 
 This WooCommerce addon is compatible with:
-* WooCommerce 2.6.14
-* WordPress 4.7.3
+* WooCommerce 2.6.14 and newer
 
 ### Installation
 
-1. Upload `woocommerce-country-based-bank-accounts` folder to the `/wp-content/plugins/` directory
-2. Activate the "WooCommerce Country Based Bank Accounts" through the 'Plugins' menu in WordPress
+1. Go to Plugins > Add New > Search
+2. Type WooCommerce Country Based Bank Accounts in the search box and hit Enter
+3. Click on the button Install and then activate the plugin
+
+= Manual Installation =
+
+The manual installation method involves downloading our plugin and uploading it to your webserver via your favourite FTP application. The WordPress codex contains [instructions on how to do this here](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
 
 ### Changelog
 Please see `readme.txt` for changelog
