@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Country Based Bank Accounts\n"
-"POT-Creation-Date: 2017-08-18 19:19+0200\n"
+"POT-Creation-Date: 2017-08-19 17:09+0200\n"
 "PO-Revision-Date: 2017-08-18 19:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,24 +17,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: class-wc-country-based-bank-accounts-settings.php:30
-#: class-wc-country-based-bank-accounts-settings.php:67
+#: class-wc-country-based-bank-accounts-settings.php:77
 msgid "Country Based Bank Accounts"
 msgstr ""
 
-#: class-wc-country-based-bank-accounts-settings.php:68
+#: class-wc-country-based-bank-accounts-settings.php:58
+msgid "No bank accounts found"
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:59
+msgid "Please, first set up bank account details"
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:59
+#: woo-country-based-bank-accounts.php:71
+msgid "here"
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:78
 msgid "Select in which countries certain bank accounts will be available."
 msgstr ""
 
-#: wc-country-based-bank-accounts.php:70
+#: woo-country-based-bank-accounts.php:70
 msgid ""
 "Your bank accounts details have been updated. You should now adjust Country "
 "Based Bank Accounts settings"
 msgstr ""
 
-#: wc-country-based-bank-accounts.php:70
-msgid "here"
-msgstr ""
-
-#: wc-country-based-bank-accounts.php:113
+#: woo-country-based-bank-accounts.php:115
 msgid "Donate"
 msgstr ""
