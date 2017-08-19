@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WooCommerce Country Based Bank Accounts
-Plugin URI:  https://wordpress.org/plugins/wc-country-based-bank-accounts/
+Plugin URI:  https://wordpress.org/plugins/woo-country-based-bank-accounts/
 Description: Choose in which countries certain BACS gateway bank accounts will be available
 Version:     1.0
 Author:      Marian Kadanka
@@ -10,7 +10,7 @@ License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages
 Text Domain: wccbba
-GitHub Plugin URI: marian-kadanka/wc-country-based-bank-accounts
+GitHub Plugin URI: marian-kadanka/woo-country-based-bank-accounts
 */
 
 /**
@@ -67,7 +67,9 @@ class WC_Country_Based_Bank_Accounts {
 	public function bank_accounts_changed() { ?>
 
 		<div class="notice notice-warning">
-			<p><?php _e( 'Your bank accounts details have been updated. You should now adjust Country Based Bank Accounts settings', 'wccbba' ); ?> <a href="?page=wc-settings&tab=<?php echo $this->id; ?>"><?php _e( 'here', 'wccbba' ); ?></a></p>
+			<p><?php _e( 'Your bank accounts details have been updated. You should now adjust Country Based Bank Accounts settings', 'wccbba' ); ?>
+				<a href="<?php echo network_admin_url( 'admin.php?page=wc-settings&tab=' . $this->id ); ?>"><?php echo esc_html__( 'here', 'wccbba' ); ?></a>
+			</p>
 		</div>
 
 	<?php }
@@ -112,7 +114,7 @@ class WC_Country_Based_Bank_Accounts {
 		// Donate link
 		array_unshift( $links, '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka" title="' . esc_attr__( 'Donate', 'wccbba' ) . '" target="_blank">' . esc_html__( 'Donate', 'wccbba' ) . '</a>' );
 		// Settings link
-		array_unshift( $links, '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=' . $this->id ) . '" title="' . esc_attr__( 'Settings', 'woocommerce' ) . '">' . esc_html__( 'Settings', 'woocommerce' ) . '</a>' );
+		array_unshift( $links, '<a href="' . network_admin_url( 'admin.php?page=wc-settings&tab=' . $this->id ) . '" title="' . esc_attr__( 'Settings', 'woocommerce' ) . '">' . esc_html__( 'Settings', 'woocommerce' ) . '</a>' );
 		
 		return $links;
 	}
