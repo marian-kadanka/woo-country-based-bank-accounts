@@ -3,8 +3,8 @@ Contributors: mariankadanka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka
 Tags: woocommerce, BACS, bank account, country, countries, country bank account
 Requires at least: 4.2
-Tested up to: 4.8.1
-Stable tag: 1.0
+Tested up to: 4.9
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ The manual installation method involves downloading our plugin and uploading it 
 1. WooCommerce Country Based Bank Accounts settings page
 
 == Changelog ==
+
+= 1.1 =
+* Tested up to Wordpress version 4.9
 
 = 1.0 =
 * Initial release.
