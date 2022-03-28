@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Country Based Bank Accounts
 Plugin URI:  https://wordpress.org/plugins/woo-country-based-bank-accounts/
 Description: Choose in which countries certain BACS gateway bank accounts will be available
-Version:     1.1
+Version:     2.0
 Author:      Marian Kadanka
 Author URI:  https://kadanka.net/
 License:     GPL2
@@ -11,7 +11,8 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages
 Text Domain: wccbba
 GitHub Plugin URI: marian-kadanka/woo-country-based-bank-accounts
-WC tested up to: 5.1
+WC requires at least: 3.4
+WC tested up to: 6.3
 */
 
 /**
@@ -37,10 +38,14 @@ class WC_Country_Based_Bank_Accounts {
 
 	private $id;
 
-	private $selected_country;
+	protected $selected_country;
+
+	protected $country_disable_bacs;
 
 	public function __construct() {
+
 		$this->id = 'wccbba';
+		$this->country_disable_bacs = get_option( $this->id . '_country_disable_bacs', 'no' ) === 'yes';
 
 		if ( is_admin() ) {
 			add_action( 'woocommerce_loaded', array( $this, 'load_settings' ) );
@@ -50,6 +55,7 @@ class WC_Country_Based_Bank_Accounts {
 			add_action( 'woocommerce_thankyou_bacs', array( $this, 'set_selected_country' ), 1 );
 			add_action( 'woocommerce_email_before_order_table', array( $this, 'set_selected_country' ), 1 );
 			add_filter( 'woocommerce_bacs_accounts', array( $this, 'available_bank_accounts' ) );
+			add_filter( 'woocommerce_available_payment_gateways', array( $this, 'maybe_disable_bacs' ) );
 		}
 	}
 
@@ -79,7 +85,7 @@ class WC_Country_Based_Bank_Accounts {
 	 * Set selected country from order or order_id
 	 */
 	public function set_selected_country( $order ) {
-		if ( !is_object ( $order ) ) {
+		if ( ! is_object ( $order ) ) {
 			$order = wc_get_order( $order );
 		}
 
@@ -99,8 +105,8 @@ class WC_Country_Based_Bank_Accounts {
 		if ( isset ( $this->selected_country ) ) {
 			foreach ( $bacs_accounts as $i => $account ) {
 				$account_countries = get_option( $this->id . '_' . md5( serialize( $account ) ) );
-				if ( $account_countries && !in_array( $this->selected_country, $account_countries ) ) {
-					unset( $bacs_accounts[$i] );
+				if ( $account_countries && ! in_array( $this->selected_country, $account_countries ) ) {
+					unset( $bacs_accounts[ $i ] );
 				}
 			}
 		}
@@ -119,6 +125,36 @@ class WC_Country_Based_Bank_Accounts {
 		
 		return $links;
 	}
+
+	/**
+	 * Disable BACS payment gateway if customer billing country doesn't match any of configured countries
+	 *
+	 * @param array $gateways Payment methods to filter.
+	 * @return array of filtered methods
+	 */
+	public function maybe_disable_bacs( $gateways ) {
+
+		if ( $this->country_disable_bacs && WC()->customer && isset( $gateways['bacs'] ) ) {
+
+			$bacs = $gateways['bacs'];
+			$billing_country = WC()->customer->get_billing_country();
+
+			if ( ! empty( $bacs->account_details ) && ! empty( $billing_country ) ) {
+
+				foreach ( $bacs->account_details as $account ) {
+					$account_countries = get_option( $this->id . '_' . md5( serialize( $account ) ) );
+					if ( empty( $account_countries ) || in_array( $billing_country, $account_countries ) ) {
+						return $gateways;
+					}
+				}
+
+				unset( $gateways['bacs'] );
+			}
+		}
+
+		return $gateways;
+	}
+
 }
 
 new WC_Country_Based_Bank_Accounts();

@@ -12,11 +12,10 @@ class WC_Country_Based_Bank_Accounts_Settings {
 
 	private $id;
 
-
 	public function __construct()	{
 		$this->id = 'wccbba';
 
-		add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_settings_tab' ), 40);
+		add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_settings_tab' ), 40 );
 
 		add_action( 'woocommerce_settings_tabs_' . $this->id, array( $this, 'add_section_to_tab' ) );
 
@@ -27,7 +26,7 @@ class WC_Country_Based_Bank_Accounts_Settings {
 	 * Create settings tab for WooCommerce settings
 	 */
 	public function add_settings_tab( $tabs ) {
-		$tabs[$this->id] = __( 'Country Based Bank Accounts', 'wccbba' );
+		$tabs[ $this->id ] = __( 'Country Based Bank Accounts', 'wccbba' );
 
 		return $tabs;
 	}
@@ -44,16 +43,24 @@ class WC_Country_Based_Bank_Accounts_Settings {
 		$fields = array();
 
 		if ( ! empty( $bacs->account_details ) ) {
+
 			foreach ( $bacs->account_details as $account ) {
 				$fields[] = array(
-						'title'   => implode(', ', array_filter( $account ) ),
-						'type'    => 'multi_select_countries',
-						// TODO no IDs on bank accounts, it's neccessary to use all fields to create a key
-						'id'      => $this->id . '_' . md5( serialize( $account ) ),
-					);
+					'title'   => implode( ', ', array_filter( $account ) ),
+					'type'    => 'multi_select_countries',
+					// TODO no IDs on bank accounts, it's neccessary to use all fields to create a key
+					'id'      => $this->id . '_' . md5( serialize( $account ) ),
+				);
 			}
-		}
-		else {
+
+			$fields[] = array(
+				'title'   => __( 'Disable BACS payment gateway for other countries?', 'wccbba' ),
+				'desc'    => __( "Disable BACS payment gateway on checkout page if customer billing country doesn't match any of the above countries", 'wccbba' ),
+				'type'    => 'checkbox',
+				'id'      => $this->id . '_country_disable_bacs',
+			);
+
+		} else {
 			$fields[] = array(
 				'title' => __( 'No bank accounts found', 'wccbba' ),
 				'desc'  => __( 'Please, first set up bank account details', 'wccbba' ) . ' <a href="' . network_admin_url( 'admin.php?page=wc-settings&tab=checkout&section=bacs' ) . '">' . esc_html__( 'here', 'wccbba' ) . '</a>',

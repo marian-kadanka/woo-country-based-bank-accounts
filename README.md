@@ -17,10 +17,12 @@ This plugin gives you option to choose which bank account will be available in c
 
 If you need to have certain bank account to be available in all countries, don't set option for it.
 
+There is also an option to disable BACS payment gateway on the checkout page, if customer billing country doesn't match any of the configured countries.
+
 ### Compatibility
 
 This WooCommerce addon is compatible with:
-* WooCommerce 2.6.14 and newer
+* WooCommerce 3.4 and newer
 
 ### Installation
 

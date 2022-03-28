@@ -3,8 +3,8 @@ Contributors: mariankadanka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka
 Tags: woocommerce, BACS, bank account, country, countries, country bank account
 Requires at least: 4.2
-Tested up to: 5.7
-Stable tag: 1.1
+Tested up to: 5.9
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,13 +18,15 @@ This plugin gives you option to choose which bank account will be available in c
 
 If you need to have certain bank account to be available in all countries, don't set option for it.
 
+There is also an option to disable BACS payment gateway on the checkout page, if customer billing country doesn't match any of the configured countries.
+
 = How it works =
 
 1. Select Country Based Bank Accounts tab in WooCommerce settings.
 2. You can choose multiple countries.
 
 This WooCommerce addon is compatible with:
-* WooCommerce 2.6.14 or newer
+* WooCommerce 3.4 or newer
 
 == Installation ==
 
@@ -41,6 +43,9 @@ The manual installation method involves downloading our plugin and uploading it 
 1. WooCommerce Country Based Bank Accounts settings page
 
 == Changelog ==
+
+= 2.0 =
+* Added option to disable BACS payment gateway on the checkout page if customer billing country doesn't match any of the configured countries
 
 = 1.1 =
 * Tested up to Wordpress version 4.9
