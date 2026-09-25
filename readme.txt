@@ -3,8 +3,8 @@ Contributors: mariankadanka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka
 Tags: woocommerce, BACS, bank account, country, countries, country bank account
 Requires at least: 4.2
-Tested up to: 5.9
-Stable tag: 2.0
+Tested up to: 6.4
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,10 @@ The manual installation method involves downloading our plugin and uploading it 
 1. WooCommerce Country Based Bank Accounts settings page
 
 == Changelog ==
+
+= 2.0.1 =
+* Add: HPOS support
+* Tested up to WordPress 6.4, WooCommerce 8.2, PHP 8.1
 
 = 2.0 =
 * Added option to disable BACS payment gateway on the checkout page if customer billing country doesn't match any of the configured countries

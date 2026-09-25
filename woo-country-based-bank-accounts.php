@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Country Based Bank Accounts
 Plugin URI:  https://wordpress.org/plugins/woo-country-based-bank-accounts/
 Description: Choose in which countries certain BACS gateway bank accounts will be available
-Version:     2.0
+Version:     2.0.1
 Author:      Marian Kadanka
 Author URI:  https://kadanka.net/
 License:     GPL2
@@ -12,7 +12,7 @@ Domain Path: /languages
 Text Domain: wccbba
 GitHub Plugin URI: marian-kadanka/woo-country-based-bank-accounts
 WC requires at least: 3.4
-WC tested up to: 6.3
+WC tested up to: 8.2
 */
 
 /**
@@ -46,6 +46,12 @@ class WC_Country_Based_Bank_Accounts {
 
 		$this->id = 'wccbba';
 		$this->country_disable_bacs = get_option( $this->id . '_country_disable_bacs', 'no' ) === 'yes';
+
+		add_action( 'before_woocommerce_init', function() {
+			if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+			}
+		} );
 
 		if ( is_admin() ) {
 			add_action( 'woocommerce_loaded', array( $this, 'load_settings' ) );
@@ -113,7 +119,7 @@ class WC_Country_Based_Bank_Accounts {
 
 		return $bacs_accounts;
 	}
-	
+
 	/**
 	 * Show action links on the plugin screen
 	 */
@@ -122,7 +128,7 @@ class WC_Country_Based_Bank_Accounts {
 		array_unshift( $links, '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka" title="' . esc_attr__( 'Donate', 'wccbba' ) . '" target="_blank">' . esc_html__( 'Donate', 'wccbba' ) . '</a>' );
 		// Settings link
 		array_unshift( $links, '<a href="' . network_admin_url( 'admin.php?page=wc-settings&tab=' . $this->id ) . '" title="' . esc_attr__( 'Settings', 'woocommerce' ) . '">' . esc_html__( 'Settings', 'woocommerce' ) . '</a>' );
-		
+
 		return $links;
 	}
 
