@@ -1,10 +1,10 @@
-=== WooCommerce Country Based Bank Accounts ===
+=== Country Based Bank Accounts for WooCommerce ===
 Contributors: mariankadanka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka
 Tags: woocommerce, BACS, bank account, country, countries, country bank account
 Requires at least: 4.2
-Tested up to: 6.4
-Stable tag: 2.0.1
+Tested up to: 6.8
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ This WooCommerce addon is compatible with:
 == Installation ==
 
 1. Go to Plugins > Add New > Search
-2. Type WooCommerce Country Based Bank Accounts in the search box and hit Enter
+2. Type Country Based Bank Accounts for WooCommerce in the search box and hit Enter
 3. Click on the button Install and then activate the plugin
 
 = Manual Installation =
@@ -40,9 +40,13 @@ The manual installation method involves downloading our plugin and uploading it 
 
 == Screenshots ==
 
-1. WooCommerce Country Based Bank Accounts settings page
+1. Country Based Bank Accounts settings page for WooCommerce
 
 == Changelog ==
+
+= 2.0.2 =
+* Tweak: change plugin name due to trademark violation
+* Tested up to WordPress 6.8, WooCommerce 10.1
 
 = 2.0.1 =
 * Add: HPOS support
