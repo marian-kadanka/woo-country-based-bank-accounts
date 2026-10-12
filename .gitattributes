@@ -1,0 +1,6 @@
+# Keep development files out of `git archive` exports, which is what GitHub serves as the
+# source zip - and therefore what anyone installing this plugin straight from GitHub gets.
+/tests          export-ignore
+/.gitattributes export-ignore
+/.gitignore     export-ignore
+/.distignore    export-ignore

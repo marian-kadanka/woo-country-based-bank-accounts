@@ -1,0 +1,17 @@
+# Nothing in this directory is part of the plugin at runtime, and some of it (run artifacts, a
+# saved copy of store settings) should never be fetchable. Deny everything.
+#
+# This only works on Apache. On nginx, add to the server block:
+#
+#   location ~* /wp-content/plugins/woo-country-based-bank-accounts/tests/ { deny all; return 404; }
+#
+# The tests do not rely on this file: they keep their artifacts outside the web root, and every
+# PHP file here refuses to run unless WordPress is already loaded.
+
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order allow,deny
+	Deny from all
+</IfModule>

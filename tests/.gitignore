@@ -1,0 +1,5 @@
+# Test runs keep their artifacts outside the plugin (see lib/artifacts.js), so there should be
+# nothing to ignore here. These patterns only catch leftovers.
+.chrome/
+.results-*.json
+.site-backup.json

@@ -1,0 +1,6 @@
+# Files that are part of the repository but not of the released plugin.
+.git
+.gitattributes
+.gitignore
+.distignore
+tests

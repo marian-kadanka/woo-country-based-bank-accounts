@@ -1,49 +1,104 @@
-#, fuzzy
+# Copyright (C) 2026 Marian Kadanka
+# This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Country Based Bank Accounts\n"
-"POT-Creation-Date: 2017-08-19 17:09+0200\n"
-"PO-Revision-Date: 2017-08-18 19:19+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: en_US\n"
+"Project-Id-Version: Country Based Bank Accounts for WooCommerce 3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-country-based-bank-accounts\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
-"X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_html__\n"
-"X-Poedit-SearchPath-0: .\n"
+"POT-Creation-Date: 2026-10-11T21:51:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wccbba\n"
 
-#: class-wc-country-based-bank-accounts-settings.php:30
-#: class-wc-country-based-bank-accounts-settings.php:77
+#. Plugin Name of the plugin
+#: woo-country-based-bank-accounts.php
+msgid "Country Based Bank Accounts for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: woo-country-based-bank-accounts.php
+msgid "https://wordpress.org/plugins/woo-country-based-bank-accounts/"
+msgstr ""
+
+#. Description of the plugin
+#: woo-country-based-bank-accounts.php
+msgid "Assign Direct bank transfer accounts to billing countries. Only matching accounts are printed, and the BACS gateway can be hidden when none match."
+msgstr ""
+
+#. Author of the plugin
+#: woo-country-based-bank-accounts.php
+msgid "Marian Kadanka"
+msgstr ""
+
+#. Author URI of the plugin
+#: woo-country-based-bank-accounts.php
+msgid "https://kadanka.net/"
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:29
+#: class-wc-country-based-bank-accounts-settings.php:92
 msgid "Country Based Bank Accounts"
 msgstr ""
 
-#: class-wc-country-based-bank-accounts-settings.php:58
+#: class-wc-country-based-bank-accounts-settings.php:52
+msgid "Printed only for orders billed to these countries."
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:53
+msgid "No country selected, printed for orders billed to any country."
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:60
+msgid "Direct bank transfer behavior on checkout"
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:61
+msgid "Decides whether a customer whose billing country appears in none of the country lists above is offered direct bank transfer at checkout. It changes nothing about printing: the bank accounts printed on the order confirmation page and in the order email always follow the billing country of the order."
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:66
+msgid "Offer it to everyone. A customer whose billing country appears in none of the country lists above can still pay by bank transfer, and in this case all of your bank accounts are printed for them to choose from."
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:67
+msgid "Do not offer it to customers whose billing country appears in none of the country lists above, so they have to pay another way. A bank account whose country list above is left empty counts for every country. Direct bank transfer is then offered to every customer at checkout, and this setting has no effect."
+msgstr ""
+
+#: class-wc-country-based-bank-accounts-settings.php:73
 msgid "No bank accounts found"
 msgstr ""
 
-#: class-wc-country-based-bank-accounts-settings.php:59
+#: class-wc-country-based-bank-accounts-settings.php:74
 msgid "Please, first set up bank account details"
 msgstr ""
 
-#: class-wc-country-based-bank-accounts-settings.php:59
-#: woo-country-based-bank-accounts.php:71
+#: class-wc-country-based-bank-accounts-settings.php:74
+#: woo-country-based-bank-accounts.php:203
 msgid "here"
 msgstr ""
 
-#: class-wc-country-based-bank-accounts-settings.php:78
-msgid "Select in which countries certain bank accounts will be available."
+#. translators: %s: link to the Direct bank transfer gateway settings
+#: class-wc-country-based-bank-accounts-settings.php:95
+#, php-format
+msgid "Select the countries each of your bank accounts is meant for. Only the accounts selected for the billing country of an order are then printed on the order confirmation page and in the order email, instead of all of them. A bank account left with no country selected below is printed for every customer, regardless of their billing country. The accounts themselves are set up in the %s settings."
 msgstr ""
 
-#: woo-country-based-bank-accounts.php:70
-msgid ""
-"Your bank accounts details have been updated. You should now adjust Country "
-"Based Bank Accounts settings"
+#: class-wc-country-based-bank-accounts-settings.php:96
+msgid "Direct bank transfer"
 msgstr ""
 
-#: woo-country-based-bank-accounts.php:115
+#: class-wc-country-based-bank-accounts-settings.php:134
+msgid "Direct bank transfer payment method is set to be offered only to customers whose billing country matches a bank account, but at least one account below has an empty country list. An account like that counts for every country, so every customer matches one and the payment method is offered to everybody anyway. Select at least one country for every bank account below to make this setting work."
+msgstr ""
+
+#: woo-country-based-bank-accounts.php:202
+msgid "Your bank accounts details have been updated. You should now adjust Country Based Bank Accounts settings"
+msgstr ""
+
+#: woo-country-based-bank-accounts.php:622
 msgid "Donate"
 msgstr ""

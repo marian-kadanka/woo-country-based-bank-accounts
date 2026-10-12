@@ -1,0 +1,63 @@
+{
+  "baseUrl": "https://testing.localhost",
+  "wpPath": "/home/www/testing",
+
+  "artifactsDir": null,
+
+  "productId": 7307,
+
+  "countries": {
+    "a": "SK",
+    "b": "CZ",
+    "unassigned": "DE"
+  },
+
+  "address": {
+    "first_name": "Wccbba",
+    "last_name": "Tester",
+    "address_1": "Hlavna 1",
+    "city": "Bratislava",
+    "postcode": "81101",
+    "email": "wccbba-test@example.com",
+    "phone": "0900123456"
+  },
+
+  "accounts": [
+    {
+      "ref": "a",
+      "account_name": "WCCBBA Test account A",
+      "account_number": "1111111111",
+      "sort_code": "1111",
+      "bank_name": "Test Bank A",
+      "iban": "WCCBBA-MARKER-AAA",
+      "bic": "AAAATEST"
+    },
+    {
+      "ref": "b",
+      "account_name": "WCCBBA Test account B",
+      "account_number": "2222222222",
+      "sort_code": "2222",
+      "bank_name": "Test Bank B",
+      "iban": "WCCBBA-MARKER-BBB",
+      "bic": "BBBBTEST"
+    },
+    {
+      "ref": "c",
+      "account_name": "WCCBBA Test account C",
+      "account_number": "3333333333",
+      "sort_code": "3333",
+      "bank_name": "Test Bank C",
+      "iban": "WCCBBA-MARKER-CCC",
+      "bic": "CCCCTEST"
+    }
+  ],
+
+  "bacsSettings": {
+    "enabled": "yes",
+    "title": "Direct bank transfer TEST",
+    "description": "Pay by <strong>bank transfer</strong>.",
+    "instructions": "WCCBBA-INSTRUCTIONS-MARKER - transfer the amount to the account below."
+  },
+
+  "instructionsMarker": "WCCBBA-INSTRUCTIONS-MARKER"
+}
