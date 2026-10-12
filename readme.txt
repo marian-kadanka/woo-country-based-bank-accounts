@@ -1,7 +1,7 @@
 === Country Based Bank Accounts for WooCommerce ===
 Contributors: mariankadanka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=marian.kadanka@gmail.com&item_name=Donation+for+Marian+Kadanka
-Tags: woocommerce, BACS, bank account, country, countries, country bank account
+Tags: woocommerce, BACS, bank account, country, country bank account
 Requires at least: 4.2
 Tested up to: 7.1
 Stable tag: 3.0
